@@ -1,0 +1,6 @@
+D:\_workspace_spring\sdjpa-spring-data-rest\src\main\java\speque\springframework\sfgrestbrewery\domain\Beer.java
+D:\_workspace_spring\sdjpa-spring-data-rest\src\main\java\speque\springframework\sfgrestbrewery\domain\Customer.java
+D:\_workspace_spring\sdjpa-spring-data-rest\src\main\java\speque\springframework\sfgrestbrewery\domain\BeerStyleEnum.java
+D:\_workspace_spring\sdjpa-spring-data-rest\src\main\java\speque\springframework\sfgrestbrewery\SfgRestfulBreweryApplication.java
+D:\_workspace_spring\sdjpa-spring-data-rest\src\main\java\speque\springframework\sfgrestbrewery\bootstrap\BeerLoader.java
+D:\_workspace_spring\sdjpa-spring-data-rest\src\main\java\speque\springframework\sfgrestbrewery\repositories\BeerRepository.java

@@ -1,17 +1,13 @@
-package guru.springframework.sfgrestbrewery.domain;
+package speque.springframework.sfgrestbrewery.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.util.UUID;
 
 /**
@@ -22,8 +18,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Beer {
-
+public class Customer {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
@@ -34,17 +29,5 @@ public class Beer {
     @Version
     private Long version;
 
-    private String beerName;
-    private BeerStyleEnum beerStyle;
-    private String upc;
-
-    private Integer quantityOnHand;
-    private BigDecimal price;
-
-    @CreationTimestamp
-    @Column(updatable = false)
-    private Timestamp createdDate;
-
-    @UpdateTimestamp
-    private Timestamp lastModifiedDate;
+    private String name;
 }

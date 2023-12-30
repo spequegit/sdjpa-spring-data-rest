@@ -1,4 +1,4 @@
-package guru.springframework.sfgrestbrewery;
+package speque.springframework.sfgrestbrewery;
 
 
 import org.junit.jupiter.api.Test;

@@ -1,12 +1,14 @@
-package guru.springframework.sfgrestbrewery.bootstrap;
+package speque.springframework.sfgrestbrewery.bootstrap;
 
-import guru.springframework.sfgrestbrewery.domain.Beer;
-import guru.springframework.sfgrestbrewery.domain.BeerStyleEnum;
-import guru.springframework.sfgrestbrewery.repositories.BeerRepository;
+import speque.springframework.sfgrestbrewery.domain.Beer;
+import speque.springframework.sfgrestbrewery.domain.BeerStyleEnum;
+import speque.springframework.sfgrestbrewery.domain.Customer;
+import speque.springframework.sfgrestbrewery.repositories.BeerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import speque.springframework.sfgrestbrewery.repositories.CustomerRepository;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -53,6 +55,7 @@ public class BeerLoader implements CommandLineRunner {
 
 
     private final BeerRepository beerRepository;
+    private final CustomerRepository customerRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -61,6 +64,11 @@ public class BeerLoader implements CommandLineRunner {
 
     private synchronized void loadBeerObjects() {
         log.debug("Loading initial data. Count is: {}", beerRepository.count() );
+
+        customerRepository.save(Customer.builder()
+                .name("Lukasz")
+                .build());
+
 
         if (beerRepository.count() == 0) {
 

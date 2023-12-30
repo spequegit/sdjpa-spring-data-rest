@@ -1,0 +1,5 @@
+speque\springframework\sfgrestbrewery\domain\BeerStyleEnum.class
+speque\springframework\sfgrestbrewery\domain\Beer$BeerBuilder.class
+speque\springframework\sfgrestbrewery\domain\Beer.class
+speque\springframework\sfgrestbrewery\repositories\BeerRepository.class
+speque\springframework\sfgrestbrewery\SfgRestfulBreweryApplication.class
